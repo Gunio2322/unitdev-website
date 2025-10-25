@@ -7,11 +7,10 @@ import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.resolve(__dirname, '../public')));
-app.use('/images', express.static(path.resolve(__dirname, '../../public/images')));
+// Serve static files from dist/public (after build)
+app.use(express.static(path.resolve(__dirname, './public')));
 
-// SSR handler
+// SSR handler - musi być NA KOŃCU po wszystkich statycznych routach
 app.get('*', (req, res) => {
   const context = {};
   
