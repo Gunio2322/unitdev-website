@@ -1435,6 +1435,16 @@ body {
         font-size: 2rem;
     }
     
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
     .hero-bg-image img {
         opacity: 0.1;
     }
