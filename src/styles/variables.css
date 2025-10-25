@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #00a8ff;
+    --secondary-color: #0066cc;
+    --accent-color: #33ccff;
+    --text-color: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --bg-primary: #0a0e27;
+    --bg-secondary: #1a1f3a;
+    --bg-card: #1e2442;
+    --bg-card-hover: #252b4a;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.5);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.7);
+    --shadow-glow: 0 0 20px rgba(0, 168, 255, 0.3);
+    --gradient-1: linear-gradient(135deg, #0066cc 0%, #00a8ff 100%);
+    --gradient-2: linear-gradient(135deg, #00a8ff 0%, #33ccff 100%);
+    --gradient-dark: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {

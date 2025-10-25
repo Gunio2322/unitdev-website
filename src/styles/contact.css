@@ -1,0 +1,125 @@
+/* Contact Page */
+.contact-section {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    color: var(--text-color);
+}
+
+.contact-form-wrapper {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--bg-primary);
+    border: 1px solid rgba(0, 168, 255, 0.3);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 168, 255, 0.3);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
+.map-placeholder {
+    background: var(--bg-card);
+    padding: 4rem;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--text-secondary);
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: var(--white);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #00a651 0%, #00d26a 100%);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #d2000e 0%, #ff1744 100%);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

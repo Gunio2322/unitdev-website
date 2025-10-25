@@ -1,0 +1,46 @@
+/* Products Page */
+.products-detail {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.comparison-section {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+}
+
+.comparison-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(0, 168, 255, 0.1);
+}
+
+.comparison-table th {
+    background: rgba(0, 168, 255, 0.1);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.comparison-table td {
+    color: var(--text-color);
+}
