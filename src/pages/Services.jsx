@@ -8,7 +8,6 @@ const Services = () => {
       icon: GlobeIcon,
       title: 'Aplikacje Webowe',
       description: 'Tworzymy zaawansowane aplikacje webowe wykorzystując najnowsze technologie.',
-      image: '/images/dmitrii-filatov-pCTWnXabxcA-unsplash.jpg',
       features: [
         '✓ React, Vue.js, Angular',
         '✓ Node.js, Django, Laravel',
@@ -21,7 +20,6 @@ const Services = () => {
       icon: SmartphoneIcon,
       title: 'Aplikacje Mobilne',
       description: 'Natywne i hybrydowe rozwiązania mobilne na iOS i Android.',
-      image: '/images/steve-busch-aMC_8t7gRWk-unsplash.jpg',
       features: [
         '✓ React Native',
         '✓ Flutter',
@@ -34,7 +32,6 @@ const Services = () => {
       icon: CloudIcon,
       title: 'Rozwiązania Cloud',
       description: 'Skalowalne systemy w chmurze dla każdej wielkości firmy.',
-      image: '/images/yousef-espanioly-TB8ziZJtYJ0-unsplash.jpg',
       features: [
         '✓ AWS, Azure, Google Cloud',
         '✓ Kubernetes & Docker',
@@ -47,7 +44,6 @@ const Services = () => {
       icon: CpuIcon,
       title: 'AI & Machine Learning',
       description: 'Wdrażamy rozwiązania sztucznej inteligencji i uczenia maszynowego.',
-      image: '/images/Gemini_Generated_Image_4xjuei4xjuei4xju.jpeg',
       features: [
         '✓ Natural Language Processing',
         '✓ Computer Vision',

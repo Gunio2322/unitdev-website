@@ -10,28 +10,24 @@ const Home = () => {
       icon: GlobeIcon,
       title: 'Aplikacje Webowe',
       description: 'Dla zaawansowanych projektów biznesowych i rozwiązań SaaS',
-      image: '/images/dmitrii-filatov-pCTWnXabxcA-unsplash.jpg',
       linkTo: '/services'
     },
     {
       icon: SmartphoneIcon,
       title: 'Aplikacje Mobilne',
       description: 'Natywne i hybrydowe rozwiązania mobilne',
-      image: '/images/steve-busch-aMC_8t7gRWk-unsplash.jpg',
       linkTo: '/services'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Solutions',
       description: 'Skalowalne systemy w chmurze dla każdej firmy',
-      image: '/images/yousef-espanioly-TB8ziZJtYJ0-unsplash.jpg',
       linkTo: '/services'
     },
     {
       icon: CpuIcon,
       title: 'AI & Machine Learning',
       description: 'Inteligentne rozwiązania wykorzystujące AI',
-      image: '/images/Gemini_Generated_Image_4xjuei4xjuei4xju.jpeg',
       linkTo: '/services'
     }
   ];
