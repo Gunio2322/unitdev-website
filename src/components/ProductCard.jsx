@@ -7,7 +7,14 @@ const ProductCard = ({ title, price, period, description, features, image, badge
       {badge && <div className="product-badge">{badge}</div>}
       {image && (
         <div className="product-image">
-          <img src={image} alt={title} loading="lazy" />
+          <img 
+            src={image} 
+            alt={title} 
+            loading="lazy" 
+            decoding="async"
+            width="400"
+            height="220"
+          />
         </div>
       )}
       <h3>{title}</h3>

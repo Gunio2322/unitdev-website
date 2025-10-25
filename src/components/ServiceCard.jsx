@@ -6,7 +6,14 @@ const ServiceCard = ({ icon: Icon, title, description, features, image, linkTo =
     <div className="service-card">
       {image && (
         <div className="service-image">
-          <img src={image} alt={title} loading="lazy" />
+          <img 
+            src={image} 
+            alt={title} 
+            loading="lazy" 
+            decoding="async"
+            width="400"
+            height="200"
+          />
         </div>
       )}
       <div className="service-icon">

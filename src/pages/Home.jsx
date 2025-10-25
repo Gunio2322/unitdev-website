@@ -113,7 +113,15 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-bg-image">
-          <img src="/images/antonio-janeski-we829ZqzqgA-unsplash.jpg" alt="Hero Background" loading="lazy" />
+          <img 
+            src="/images/antonio-janeski-we829ZqzqgA-unsplash.jpg" 
+            alt="Hero Background" 
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1920"
+            height="1080"
+          />
         </div>
         <div className="hero-content">
           <h1>Profesjonalne Rozwiązania Programistyczne</h1>
