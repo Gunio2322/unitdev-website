@@ -1,89 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import HeroCard from '../components/HeroCard';
-import ServiceCard from '../components/ServiceCard';
-import ProductCard from '../components/ProductCard';
-import { HomeIcon, LayersIcon, ShieldIcon, GlobeIcon, SmartphoneIcon, CloudIcon, CpuIcon } from '../components/icons/Icons';
+import { LayersIcon, CloudIcon, CpuIcon } from '../components/icons/Icons';
 import '../styles/home.css';
 
 const Home = () => {
-  const services = [
-    {
-      icon: GlobeIcon,
-      title: 'Aplikacje Webowe',
-      description: 'Dla zaawansowanych projektów biznesowych i rozwiązań SaaS',
-      linkTo: '/services'
-    },
-    {
-      icon: SmartphoneIcon,
-      title: 'Aplikacje Mobilne',
-      description: 'Natywne i hybrydowe rozwiązania mobilne',
-      linkTo: '/services'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Solutions',
-      description: 'Skalowalne systemy w chmurze dla każdej firmy',
-      linkTo: '/services'
-    },
-    {
-      icon: CpuIcon,
-      title: 'AI & Machine Learning',
-      description: 'Inteligentne rozwiązania wykorzystujące AI',
-      linkTo: '/services'
-    }
-  ];
-
-  const products = [
-    {
-      title: 'UnitCRM Pro',
-      price: '499 zł',
-      period: '/miesiąc',
-      description: 'Kompleksowy system CRM dla średnich i dużych firm',
-      image: '/images/Gemini_Generated_Image_cpa2pccpa2pccpa2.jpeg',
-      badge: 'Bestseller',
-      features: [
-        '✓ Zarządzanie kontaktami',
-        '✓ Automatyzacja sprzedaży',
-        '✓ Zaawansowane raporty',
-        '✓ Mobile app (iOS & Android)'
-      ]
-    },
-    {
-      title: 'UnitERP Suite',
-      price: '899 zł',
-      period: '/miesiąc',
-      description: 'Zintegrowany system zarządzania przedsiębiorstwem',
-      image: '/images/Gemini_Generated_Image_pwu3zypwu3zypwu3.jpeg',
-      features: [
-        '✓ Moduł finansowo-księgowy',
-        '✓ Zarządzanie magazynem',
-        '✓ Moduł HR i płace',
-        '✓ Business Intelligence'
-      ]
-    },
-    {
-      title: 'UnitCloud',
-      price: '299 zł',
-      period: '/miesiąc',
-      description: 'Platforma No-Code do tworzenia aplikacji',
-      image: '/images/Gemini_Generated_Image_updl5updl5updl5u.jpeg',
-      badge: 'Nowość',
-      features: [
-        '✓ Drag & drop interface',
-        '✓ Gotowe szablony',
-        '✓ Integracje z API',
-        '✓ Real-time collaboration'
-      ]
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projektów Ukończonych' },
-    { number: '250+', label: 'Zadowolonych Klientów' },
-    { number: '50+', label: 'Członków Zespołu' },
-    { number: '15', label: 'Lat Doświadczenia' }
-  ];
-
   const successStories = [
     {
       title: 'E-commerce Platform dla TechMart',
@@ -108,7 +28,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>UnitDev - Profesjonalne Rozwiązania Programistyczne | Aplikacje Web i Mobile</title>
+        <title>Aplikacje Webowe do Monitorowania Produkcji - Tańsza Alternatywa dla SCADA | Enerjana</title>
         <meta name="description" content="Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. Specjalizujemy się w React, Node.js, Cloud Solutions i AI. Ponad 500 zrealizowanych projektów." />
         <meta name="keywords" content="tworzenie aplikacji, aplikacje webowe, aplikacje mobilne, React, Node.js, Cloud, AI, Machine Learning, UnitDev" />
         <meta property="og:title" content="UnitDev - Profesjonalne Rozwiązania Programistyczne" />
@@ -132,70 +52,76 @@ const Home = () => {
           />
         </div>
         <div className="hero-content">
-          <h1>Profesjonalne Rozwiązania Programistyczne</h1>
-          <p>Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise</p>
+          <h1>Aplikacje Webowe do Monitorowania Produkcji - Tańsza Alternatywa dla SCADA</h1>
+          <p>Łączę 18 lat doświadczenia w automatyce przemysłowej z 10-letnim stażem w programowaniu aplikacji webowych. Enerjana to przystępne cenowo rozwiązania dla małych i średnich firm - alternatywa dla drogich systemów SCADA.</p>
           <div className="hero-cards">
             <HeroCard 
-              icon={HomeIcon}
-              title="Pełny Zakres Usług"
-              description="Od prostych stron po złożone systemy enterprise"
+              icon={CpuIcon}
+              title="Integracja PLC z Web"
+              description="Łączę sterowniki przemysłowe (Mitsubishi, Siemens) z aplikacjami webowymi"
               linkTo="/services"
-              linkText="Zobacz więcej"
+              linkText="Zobacz usługi"
             />
             <HeroCard 
               icon={LayersIcon}
-              title="Nowoczesne Technologie"
-              description="Wykorzystujemy najnowsze frameworki i narzędzia"
-              linkTo="/products"
-              linkText="Nasze produkty"
+              title="Monitoring Real-Time"
+              description="Dashboardy produkcyjne z wizualizacją procesów w czasie rzeczywistym"
+              linkTo="/services"
+              linkText="Dowiedz się więcej"
             />
             <HeroCard 
-              icon={ShieldIcon}
-              title="Wsparcie 24/7"
-              description="Eksperckie wsparcie techniczne bez ukrytych opłat"
+              icon={CloudIcon}
+              title="Tańsza od SCADA"
+              description="Rozwiązania dostosowane do budżetu małych i średnich firm produkcyjnych"
               linkTo="/contact"
-              linkText="Kontakt"
+              linkText="Zapytaj o wycenę"
             />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="services">
+      {/* About Business Section */}
+      <section className="about-business">
         <div className="container">
-          <h2>Nasze Usługi</h2>
-          <p className="section-subtitle">Kompleksowe rozwiązania IT dostosowane do Twoich potrzeb</p>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
+          <h2>Enerjana - Automatyka Przemysłowa Spotyka Web Development</h2>
+          {/* <div className="business-intro">
+            <p className="lead-text">
+              Łączę <strong>18 lat doświadczenia w automatyce przemysłowej</strong> z <strong>10-letnim stażem w programowaniu aplikacji webowych</strong>. 
+              Enerjana to przystępne cenowo rozwiązania dla małych i średnich firm - alternatywa dla drogich systemów SCADA.
+            </p>
+          </div> */}
 
-      {/* Products Section */}
-      <section id="products" className="products">
-        <div className="container">
-          <h2>Nasze Produkty</h2>
-          <p className="section-subtitle">Gotowe rozwiązania oszczędzające Twój czas i budżet</p>
-          <div className="products-grid">
-            {products.map((product, index) => (
-              <ProductCard key={index} {...product} />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="stats">
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
+
+          <div className="why-work-section">
+            <h3>Dlaczego warto ze mną współpracować?</h3>
+            <div className="why-work-content">
+              <p>
+                Jako <strong>automatyk z 18-letnim doświadczeniem</strong> doskonale rozumiem specyfikę procesów przemysłowych, 
+                protokoły komunikacyjne i wymagania systemów sterowania. Połączenie tej wiedzy z zaawansowanymi umiejętnościami 
+                w <strong>JavaScript (Node.js, Express, React, MongoDB)</strong> pozwala mi tworzyć rozwiązania, które naprawdę działają 
+                w warunkach produkcyjnych.
+              </p>
+              <p>
+                Oferuję <strong>realną alternatywę dla systemów SCADA</strong> - aplikacje stworzone pod Twoje potrzeby, które kosztują 
+                ułamek ceny gotowych systemów przemysłowych. Idealne dla małych i średnich firm, które nie mają budżetu na drogie licencje, 
+                ale potrzebują profesjonalnego narzędzia do monitoringu produkcji.
+              </p>
+              <p className="highlight-text">
+                Nie jestem tylko programistą - jestem automatykiem, który pisze kod. Znam język Twojej maszyny i wiem, 
+                jak go przetłumaczyć na przejrzysty, funkcjonalny interfejs webowy.
+              </p>
+            </div>
+          </div>
+
+          <div className="business-footer">
+            <p className="location-info">
+              <strong>Obszar działania:</strong> Województwo łódzkie, mazowieckie i okoliczne regiony Polski centralnej.
+            </p>
+            <p className="cta-text">
+              Skontaktuj się ze mną - porozmawiajmy o tym, jak mogę zautomatyzować i zdigitalizować procesy w Twojej firmie.
+            </p>
+            <a href="/contact" className="btn-primary">Umów konsultację</a>
           </div>
         </div>
       </section>

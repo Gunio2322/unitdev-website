@@ -116,3 +116,211 @@
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
+
+/* Experience Section */
+.experience-section {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.experience-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience-column {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.experience-column:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.experience-column h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.experience-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-column ul li {
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.experience-column ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+}
+
+.benefits-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.benefits-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefits-column {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.benefits-column h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.benefits-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-column ul li {
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.benefits-column ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Collaboration Section */
+.collaboration-section {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.collaboration-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.collaboration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.collaboration-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.collaboration-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.collaboration-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.collaboration-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Location Section */
+.location-section {
+    padding: 60px 20px;
+    background: var(--bg-primary);
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.location-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    line-height: 1.8;
+}
+
+.location-section strong {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .experience-columns,
+    .benefits-columns,
+    .collaboration-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-intro h2,
+    .stats-section h2,
+    .experience-section h2,
+    .benefits-section h2,
+    .collaboration-section h2,
+    .location-section h2 {
+        font-size: 2rem;
+    }
+}

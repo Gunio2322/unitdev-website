@@ -4,10 +4,8 @@ import '../styles/about.css';
 
 const About = () => {
   const [stats, setStats] = useState([
-    { target: 500, current: 0, label: 'Projektów Ukończonych' },
-    { target: 250, current: 0, label: 'Zadowolonych Klientów' },
-    { target: 50, current: 0, label: 'Członków Zespołu' },
-    { target: 15, current: 0, label: 'Lat Doświadczenia' }
+    { target: 18, current: 0, label: 'Lat w Automatyce' },
+    { target: 10, current: 0, label: 'Lat w Programowaniu' }
   ]);
   
   const statsRef = useRef(null);
@@ -53,75 +51,36 @@ const About = () => {
     });
   };
 
-  const successStories = [
-    {
-      title: 'E-commerce Platform dla TechMart',
-      description: 'Stworzyliśmy platformę e-commerce, która obsługuje 10,000+ transakcji dziennie. Zwiększyliśmy konwersję o 45% i obniżyliśmy koszty operacyjne o 30%.',
-      industry: 'E-commerce',
-      year: '2024'
-    },
-    {
-      title: 'System Bankowy dla FinanceHub',
-      description: 'Zintegrowaliśmy kompleksowy system bankowości internetowej z najwyższymi standardami bezpieczeństwa. Projekt otrzymał certyfikat ISO 27001.',
-      industry: 'Finanse',
-      year: '2023'
-    },
-    {
-      title: 'Aplikacja IoT dla SmartHome',
-      description: 'Rozwiązanie IoT łączące 50,000+ urządzeń smart home w czasie rzeczywistym.',
-      industry: 'IoT',
-      year: '2024'
-    },
-    {
-      title: 'System Logistyczny dla TransLog',
-      description: 'Platforma zarządzająca flotą 200+ pojazdów z optymalizacją tras w czasie rzeczywistym.',
-      industry: 'Logistyka',
-      year: '2023'
-    }
-  ];
-
-  const values = [
-    { title: 'Innowacyjność', description: 'Śledzimy najnowsze trendy i wdrażamy je w naszych projektach' },
-    { title: 'Jakość', description: 'Każdy projekt przechodzi przez wielopoziomową kontrolę jakości' },
-    { title: 'Partnerstwo', description: 'Traktujemy klientów jak długoterminowych partnerów biznesowych' },
-    { title: 'Transparentność', description: 'Jasna komunikacja i brak ukrytych kosztów' }
-  ];
-
-  const testimonials = [
-    { author: 'Jan Kowalski', company: 'TechMart CEO', text: 'Współpraca z UnitDev była doskonała. Zespół dostarczył rozwiązanie przekraczające nasze oczekiwania.' },
-    { author: 'Anna Nowak', company: 'FinanceHub CTO', text: 'Profesjonalizm i terminowość. Polecam każdemu kto szuka solidnego partnera technologicznego.' },
-    { author: 'Piotr Wiśniewski', company: 'SmartHome Founder', text: 'Dzięki UnitDev udało nam się wejść na rynek w rekordowym czasie.' }
-  ];
-
   return (
     <>
       <Helmet>
-        <title>O Nas - 15 Lat Doświadczenia, 500+ Projektów | UnitDev</title>
-        <meta name="description" content="UnitDev to zespół 50+ ekspertów technologii z 15-letnim doświadczeniem. 500+ ukończonych projektów, 250+ zadowolonych klientów. Innowacyjność, jakość i partnerstwo." />
-        <meta name="keywords" content="o firmie, doświadczenie IT, zespół programistów, historia firmy, wartości firmy, case studies, referencje" />
-        <meta property="og:title" content="O Nas - 15 Lat Doświadczenia | UnitDev" />
-        <meta property="og:description" content="Zespół pasjonatów technologii. 15 lat doświadczenia, 500+ projektów, najwyższa jakość." />
+        <title>O Mnie - Automatyk i Web Developer | Enerjana</title>
+        <meta name="description" content="Łączę 18 lat doświadczenia w automatyce przemysłowej z 10 latami programowania webowego. Programowanie sterowników PLC, aplikacje SCADA, dashboardy, integracja PLC z systemami IT." />
+        <meta name="keywords" content="automatyk programista, programowanie PLC, sterowniki przemysłowe, Node.js developer, React developer, integracja PLC ERP, automatyka i IT" />
+        <meta property="og:title" content="O Mnie - Automatyk i Web Developer | Enerjana" />
+        <meta property="og:description" content="18 lat w automatyce + 10 lat w programowaniu webowym. Unikalne połączenie kompetencji dla przemysłu." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://unitdev.pl/about" />
+        <link rel="canonical" href="https://enerjana.pl/about" />
       </Helmet>
       
       <section className="page-header">
         <div className="container">
-          <h1>O Nas</h1>
-          <p>Poznaj naszą historię i wartości</p>
+          <h1>O Mnie</h1>
+          <p>Poznaj moje doświadczenie i kompetencje</p>
         </div>
       </section>
 
       <section className="about-intro">
         <div className="container">
-          <h2>Kim Jesteśmy</h2>
-          <p>UnitDev to zespół pasjonatów technologii z 15-letnim doświadczeniem w tworzeniu zaawansowanych rozwiązań programistycznych. Specjalizujemy się w projektach wymagających najwyższej jakości kodu i innowacyjnych podejść.</p>
+          <h2>Kim Jestem</h2>
+          <p>Jestem <strong>Enerjana</strong> - jednoosobową działalnością gospodarczą łączącą dwa światy: automatykę przemysłową i nowoczesne technologie webowe. To unikalne połączenie kompetencji pozwala mi realizować projekty, które wymagają zarówno głębokiej znajomości systemów przemysłowych (PLC, SCADA), jak i umiejętności tworzenia zaawansowanych aplikacji internetowych.</p>
+          <p>Moje 18 lat doświadczenia w automatyce przemysłowej oraz 10 lat w programowaniu webowym (Node.js, React) sprawiają, że rozumiem potrzeby produkcji i potrafię dostarczyć nowoczesne rozwiązania IT dopasowane do realiów zakładów produkcyjnych.</p>
         </div>
       </section>
 
       <section className="stats-section" ref={statsRef}>
         <div className="container">
-          <h2>Nasze Osiągnięcia</h2>
+          <h2>Doświadczenie</h2>
           <div className="stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="stat-item">
@@ -133,50 +92,83 @@ const About = () => {
         </div>
       </section>
 
-      <section className="success-stories">
+      <section className="experience-section">
         <div className="container">
-          <h2>Historie Sukcesu</h2>
-          <div className="stories-grid">
-            {successStories.map((story, index) => (
-              <div key={index} className="story-card">
-                <h3>{story.title}</h3>
-                <p>{story.description}</p>
-                <div className="story-meta">
-                  <span className="industry">{story.industry}</span>
-                  <span className="year">{story.year}</span>
-                </div>
-              </div>
-            ))}
+          <h2>Moje Kompetencje</h2>
+          <div className="experience-columns">
+            <div className="experience-column">
+              <h3>🏭 Automatyka Przemysłowa</h3>
+              <ul>
+                <li>Programowanie sterowników PLC (Mitsubishi, Siemens)</li>
+                <li>Protokoły komunikacyjne (MC Protocol, SLMP, S7, Modbus TCP, OPC UA)</li>
+                <li>Systemy SCADA i wizualizacje przemysłowe</li>
+                <li>Diagnostyka i optymalizacja systemów automatyki</li>
+                <li>Integracja maszyn i linii produkcyjnych</li>
+              </ul>
+            </div>
+            <div className="experience-column">
+              <h3>💻 Programowanie Webowe</h3>
+              <ul>
+                <li>Backend: Node.js, Express.js, REST API</li>
+                <li>Frontend: React, responsive design</li>
+                <li>Bazy danych: MongoDB, MySQL</li>
+                <li>Real-time: WebSockets dla monitorowania na żywo</li>
+                <li>Middleware: integracja PLC z systemami IT (ERP, MES, BI)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="values-section">
+      <section className="benefits-section">
         <div className="container">
-          <h2>Nasze Wartości</h2>
-          <div className="values-grid">
-            {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
-              </div>
-            ))}
+          <h2>Co To Dla Ciebie Oznacza</h2>
+          <div className="benefits-columns">
+            <div className="benefits-column">
+              <h3>Rozumiem:</h3>
+              <ul>
+                <li>Jak działają sterowniki PLC i protokoły komunikacyjne</li>
+                <li>Potrzeby i realia zakładów produkcyjnych</li>
+                <li>Język automatyków i inżynierów produkcji</li>
+                <li>Ograniczenia i możliwości systemów przemysłowych</li>
+                <li>Znaczenie niezawodności i czasu pracy systemu</li>
+              </ul>
+            </div>
+            <div className="benefits-column">
+              <h3>Potrafię:</h3>
+              <ul>
+                <li>Stworzyć aplikacje webowe czytające dane bezpośrednio z PLC</li>
+                <li>Zaprojektować dashboardy z danymi produkcyjnymi i biznesowymi</li>
+                <li>Zbudować middleware łączące PLC z systemami ERP/MES</li>
+                <li>Dostarczyć tańszą alternatywę dla systemów SCADA</li>
+                <li>Wdrożyć rozwiązania dopasowane do Twojego budżetu</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="testimonials">
+      <section className="collaboration-section">
         <div className="container">
-          <h2>Co Mówią Nasi Klienci</h2>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <p className="testimonial-author">{testimonial.author}</p>
-                <p className="testimonial-company">{testimonial.company}</p>
-              </div>
-            ))}
+          <h2>Z Kim Współpracuję</h2>
+          <div className="collaboration-grid">
+            <div className="collaboration-card">
+              <h3>🏭 Firmy Produkcyjne</h3>
+              <p>Bezpośrednia współpraca z małymi i średnimi zakładami produkcyjnymi, które potrzebują aplikacji do monitorowania maszyn, dashboardów produkcyjnych lub integracji PLC z systemami biznesowymi.</p>
+            </div>
+            <div className="collaboration-card">
+              <h3>🤝 Firmy Automatyki</h3>
+              <p>Wsparcie dla innych firm automatyki, które potrzebują kompetencji webowych - tworzę dla nich aplikacje SCADA, dashboardy czy systemy integracyjne jako podwykonawca.</p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section className="location-section">
+        <div className="container">
+          <h2>Obszar Działania</h2>
+          <p>Działam głównie na terenie <strong>województwa łódzkiego i mazowieckiego</strong> (centralna Polska). W przypadku projektów zdalnych (aplikacje webowe, integracje) obszar działania jest nieograniczony.</p>
+          <p>Oferuję również zdalne wsparcie techniczne i konsultacje online dla klientów z całej Polski.</p>
         </div>
       </section>
     </>

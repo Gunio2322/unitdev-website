@@ -6,9 +6,11 @@ import ScrollTop from './components/ScrollTop';
 import Loader from './components/Loader';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Products from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Monitoring from './pages/Monitoring';
+import Dashboards from './pages/Dashboards';
+import Integration from './pages/Integration';
 import './styles/main.css';
 
 function App() {
@@ -20,9 +22,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/monitoring" element={<Monitoring />} />
+          <Route path="/dashboards" element={<Dashboards />} />
+          <Route path="/integration" element={<Integration />} />
         </Routes>
       </main>
       <Footer />

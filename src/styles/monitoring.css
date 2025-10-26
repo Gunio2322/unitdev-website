@@ -1,0 +1,527 @@
+/* Monitoring Page Styles */
+
+/* Intro Section */
+.monitoring-intro {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.intro-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lead-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.lead-paragraph strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.solution-highlight {
+    background: var(--gradient-dark);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-glow);
+    text-align: center;
+}
+
+.solution-highlight h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.solution-highlight p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.solution-highlight strong {
+    color: var(--accent-color);
+}
+
+/* What Offer Section */
+.what-offer-section {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+}
+
+.what-offer-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.section-intro strong {
+    color: var(--primary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(0, 168, 255, 0.5);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 0.8rem 0;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(0, 168, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li:hover {
+    color: var(--primary-color);
+    transform: translateX(10px);
+    padding-left: 10px;
+}
+
+/* Comparison Section */
+.comparison-section {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.comparison-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.comparison-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.comparison-intro strong {
+    color: var(--primary-color);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.comparison-card {
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.scada-card {
+    background: rgba(210, 0, 14, 0.05);
+    border-color: rgba(210, 0, 14, 0.3);
+}
+
+.scada-card:hover {
+    border-color: rgba(210, 0, 14, 0.6);
+    box-shadow: 0 0 20px rgba(210, 0, 14, 0.3);
+}
+
+.webapp-card {
+    background: rgba(0, 168, 255, 0.05);
+    border-color: var(--primary-color);
+}
+
+.webapp-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.comparison-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.scada-card h3 {
+    color: #ff6b6b;
+}
+
+.webapp-card h3 {
+    color: var(--primary-color);
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-list li {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-list li:last-child {
+    border-bottom: none;
+}
+
+/* Benefits Section */
+.benefits-section {
+    margin-top: 4rem;
+}
+
+.benefits-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.benefit-item strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.benefit-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Target Audience Section */
+.target-audience-section {
+    padding: 80px 20px;
+    background: var(--bg-primary);
+}
+
+.target-audience-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.audience-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.audience-intro strong {
+    color: var(--primary-color);
+}
+
+.audience-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.audience-list li {
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.audience-list li:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-glow);
+    border-left-width: 6px;
+}
+
+/* Expertise Section */
+.expertise-section {
+    padding: 80px 20px;
+    background: var(--bg-secondary);
+}
+
+.expertise-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--gradient-dark);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 168, 255, 0.3);
+}
+
+.expertise-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.expertise-text strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.expertise-highlight {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(0, 168, 255, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.expertise-highlight strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.location-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.location-text strong {
+    color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .solution-highlight {
+        padding: 2rem;
+    }
+    
+    .solution-highlight h2 {
+        font-size: 1.6rem;
+    }
+    
+    .solution-highlight p {
+        font-size: 1.1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .expertise-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lead-paragraph {
+        font-size: 1.1rem;
+    }
+    
+    .solution-highlight h2 {
+        font-size: 1.4rem;
+    }
+    
+    .feature-card,
+    .comparison-card {
+        padding: 1.5rem;
+    }
+    
+    .comparison-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .expertise-content {
+        padding: 1.5rem;
+    }
+    
+    .expertise-text,
+    .expertise-highlight {
+        font-size: 1.1rem;
+    }
+}
+
+/* Integration Page Specific Styles */
+.middleware-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.middleware-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.examples-section {
+    margin-top: 4rem;
+}
+
+.examples-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.example-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.example-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    box-shadow: var(--shadow-glow);
+}
+
+.example-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.flow-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .middleware-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .example-card {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -28,12 +28,14 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <div className="logo">
-          <Link to="/">UnitDev</Link>
+          <Link to="/">Enerjana</Link>
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Start</Link></li>
           <li><Link to="/services" className={location.pathname === '/services' ? 'active' : ''}>Usługi</Link></li>
-          <li><Link to="/products" className={location.pathname === '/products' ? 'active' : ''}>Produkty</Link></li>
+          <li><Link to="/monitoring" className={location.pathname === '/monitoring' ? 'active' : ''}>Monitoring</Link></li>
+          <li><Link to="/dashboards" className={location.pathname === '/dashboards' ? 'active' : ''}>Dashboardy</Link></li>
+          <li><Link to="/integration" className={location.pathname === '/integration' ? 'active' : ''}>Integracja PLC</Link></li>
           <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>O nas</Link></li>
           <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Kontakt</Link></li>
         </ul>

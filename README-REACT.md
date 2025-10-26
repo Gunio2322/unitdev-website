@@ -27,12 +27,13 @@ Responsywna aplikacja React z Server-Side Rendering (SSR) dla firmy programistyc
 │   │   ├── Loader.jsx
 │   │   ├── ScrollTop.jsx
 │   │   ├── HeroCard.jsx
-│   │   ├── ServiceCard.jsx
-│   │   └── ProductCard.jsx
+│   │   └── ServiceCard.jsx
 │   ├── pages/               # Strony aplikacji
 │   │   ├── Home.jsx
 │   │   ├── Services.jsx
-│   │   ├── Products.jsx
+│   │   ├── Monitoring.jsx
+│   │   ├── Dashboards.jsx
+│   │   ├── Integration.jsx
 │   │   ├── About.jsx
 │   │   └── Contact.jsx
 │   ├── styles/              # Modułowe pliki CSS
@@ -43,10 +44,9 @@ Responsywna aplikacja React z Server-Side Rendering (SSR) dla firmy programistyc
 │   │   ├── scroll-top.css
 │   │   ├── hero-card.css
 │   │   ├── service-card.css
-│   │   ├── product-card.css
 │   │   ├── home.css
 │   │   ├── services.css
-│   │   ├── products.css
+│   │   ├── monitoring.css
 │   │   ├── about.css
 │   │   └── contact.css
 │   └── App.jsx              # Główny komponent aplikacji
@@ -167,12 +167,13 @@ npm run dev:server
 ### UI Components
 - `<HeroCard />` - Karty w hero section
 - `<ServiceCard />` - Karty usług z obrazkami + SVG
-- `<ProductCard />` - Karty produktów z cenami
 
 ### Strony
-- `/` - Home (hero, usługi, produkty, stats, success stories)
+- `/` - Home (hero, usługi, stats, success stories)
 - `/services` - Szczegółowa strona usług
-- `/products` - Katalog produktów + comparison table
+- `/monitoring` - Monitoring procesów przemysłowych
+- `/dashboards` - Dashboardy przemysłowe
+- `/integration` - Integracja PLC z systemami IT
 - `/about` - O firmie (stats counter, testimonials, values)
 - `/contact` - Formularz kontaktowy
 

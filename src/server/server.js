@@ -31,23 +31,14 @@ const getMetaTags = (pathname) => {
         ogDescription: 'Kompleksowe usługi programistyczne: aplikacje webowe, mobilne, Cloud Solutions, AI i cyberbezpieczeństwo.',
         canonical: 'https://unitdev.pl/services'
       };
-    case '/products':
-      return {
-        title: 'Produkty - UnitCRM Pro, UnitERP Suite, UnitCloud | UnitDev',
-        description: 'Gotowe produkty SaaS: UnitCRM Pro (system CRM od 499 zł/mies), UnitERP Suite (zintegrowany ERP od 899 zł/mies), UnitCloud (platforma No-Code od 299 zł/mies).',
-        keywords: 'CRM, ERP, No-Code platform, system CRM, system ERP, SaaS, oprogramowanie biznesowe, zarządzanie firmą',
-        ogTitle: 'Produkty - UnitCRM Pro, UnitERP Suite, UnitCloud',
-        ogDescription: 'Gotowe rozwiązania SaaS dla Twojego biznesu. CRM, ERP i platforma No-Code.',
-        canonical: 'https://unitdev.pl/products'
-      };
     case '/about':
       return {
-        title: 'O Nas - 15 Lat Doświadczenia, 500+ Projektów | UnitDev',
-        description: 'UnitDev to zespół 50+ ekspertów technologii z 15-letnim doświadczeniem. 500+ ukończonych projektów, 250+ zadowolonych klientów. Innowacyjność, jakość i partnerstwo.',
-        keywords: 'o firmie, doświadczenie IT, zespół programistów, historia firmy, wartości firmy, case studies, referencje',
-        ogTitle: 'O Nas - 15 Lat Doświadczenia | UnitDev',
-        ogDescription: 'Zespół pasjonatów technologii. 15 lat doświadczenia, 500+ projektów, najwyższa jakość.',
-        canonical: 'https://unitdev.pl/about'
+        title: 'O Mnie - Automatyk i Web Developer | Enerjana',
+        description: 'Łączę 18 lat doświadczenia w automatyce przemysłowej z 10 latami programowania webowego. Programowanie sterowników PLC, aplikacje SCADA, dashboardy, integracja PLC z systemami IT.',
+        keywords: 'automatyk programista, programowanie PLC, sterowniki przemysłowe, Node.js developer, React developer, integracja PLC ERP, automatyka i IT',
+        ogTitle: 'O Mnie - Automatyk i Web Developer | Enerjana',
+        ogDescription: '18 lat w automatyce + 10 lat w programowaniu webowym. Unikalne połączenie kompetencji dla przemysłu.',
+        canonical: 'https://enerjana.pl/about'
       };
     case '/contact':
       return {
@@ -57,6 +48,33 @@ const getMetaTags = (pathname) => {
         ogTitle: 'Kontakt - Skontaktuj się z Nami | UnitDev',
         ogDescription: 'Omówmy Twój projekt. Bezpłatna wycena i konsultacja.',
         canonical: 'https://unitdev.pl/contact'
+      };
+    case '/monitoring':
+      return {
+        title: 'Aplikacje Webowe do Monitorowania i Sterowania - Tańsza Alternatywa dla SCADA | Enerjana',
+        description: 'Dedykowane aplikacje webowe do monitorowania procesów przemysłowych. Tańsza alternatywa dla systemów SCADA - kosztuje ułamek ceny, działa w przeglądarce, bez opłat licencyjnych.',
+        keywords: 'monitoring procesów przemysłowych, aplikacje webowe przemysł, alternatywa SCADA, integracja PLC, Mitsubishi Siemens, monitoring produkcji',
+        ogTitle: 'Aplikacje Webowe do Monitorowania - Alternatywa dla SCADA',
+        ogDescription: 'Dedykowane aplikacje webowe do monitoringu przemysłu. Tańsze niż SCADA, dostępne przez przeglądarkę.',
+        canonical: 'https://unitdev.pl/monitoring'
+      };
+    case '/dashboards':
+      return {
+        title: 'Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych | Enerjana',
+        description: 'Dedykowane dashboardy przemysłowe z Real-Time monitoring. Wizualizacja KPI produkcyjnych, OEE, zarządzanie energią. React, Node.js, WebSockets. Województwo łódzkie, mazowieckie.',
+        keywords: 'dashboard przemysłowy, wizualizacja produkcji, monitoring real-time, KPI produkcyjne, OEE, zarządzanie energią',
+        ogTitle: 'Dashboardy Przemysłowe - Wizualizacja Danych | Enerjana',
+        ogDescription: 'Dashboardy przemysłowe agregujące dane z PLC i systemów IT. Monitoring real-time, KPI, raporty zmianowe.',
+        canonical: 'https://unitdev.pl/dashboards'
+      };
+    case '/integration':
+      return {
+        title: 'Integracja PLC z Systemami IT - Połącz Świat OT z IT | Enerjana',
+        description: 'Integracja sterowników PLC (Mitsubishi, Siemens) z systemami ERP, MES, BI. Protokoły MC, S7, OPC UA, Modbus TCP. Middleware Node.js. Województwo łódzkie, mazowieckie.',
+        keywords: 'integracja PLC, OT IT, sterowniki Mitsubishi Siemens, MC Protocol, S7 Communication, OPC UA, middleware przemysłowy, ERP MES integracja',
+        ogTitle: 'Integracja PLC z Systemami IT - OT/IT Bridge | Enerjana',
+        ogDescription: 'Łączę świat automatyki (OT) z systemami IT. Integracja PLC z ERP, MES, BI. Protokoły przemysłowe + REST API.',
+        canonical: 'https://unitdev.pl/integration'
       };
     default:
       return {
