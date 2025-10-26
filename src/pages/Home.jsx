@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import HeroCard from '../components/HeroCard';
 import ServiceCard from '../components/ServiceCard';
 import ProductCard from '../components/ProductCard';
@@ -106,6 +107,17 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>UnitDev - Profesjonalne Rozwiązania Programistyczne | Aplikacje Web i Mobile</title>
+        <meta name="description" content="Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. Specjalizujemy się w React, Node.js, Cloud Solutions i AI. Ponad 500 zrealizowanych projektów." />
+        <meta name="keywords" content="tworzenie aplikacji, aplikacje webowe, aplikacje mobilne, React, Node.js, Cloud, AI, Machine Learning, UnitDev" />
+        <meta property="og:title" content="UnitDev - Profesjonalne Rozwiązania Programistyczne" />
+        <meta property="og:description" content="Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. 15 lat doświadczenia, 500+ projektów." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://unitdev.pl" />
+        <link rel="canonical" href="https://unitdev.pl" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-bg-image">

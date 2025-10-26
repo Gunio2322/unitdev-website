@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ProductCard from '../components/ProductCard';
 import '../styles/products.css';
 
@@ -60,6 +61,16 @@ const Products = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Produkty - UnitCRM Pro, UnitERP Suite, UnitCloud | UnitDev</title>
+        <meta name="description" content="Gotowe produkty SaaS: UnitCRM Pro (system CRM od 499 zł/mies), UnitERP Suite (zintegrowany ERP od 899 zł/mies), UnitCloud (platforma No-Code od 299 zł/mies)." />
+        <meta name="keywords" content="CRM, ERP, No-Code platform, system CRM, system ERP, SaaS, oprogramowanie biznesowe, zarządzanie firmą" />
+        <meta property="og:title" content="Produkty - UnitCRM Pro, UnitERP Suite, UnitCloud" />
+        <meta property="og:description" content="Gotowe rozwiązania SaaS dla Twojego biznesu. CRM, ERP i platforma No-Code." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://unitdev.pl/products" />
+      </Helmet>
+      
       <section className="page-header">
         <div className="container">
           <h1>Nasze Produkty</h1>

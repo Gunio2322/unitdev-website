@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/about.css';
 
 const About = () => {
@@ -94,6 +95,16 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>O Nas - 15 Lat Doświadczenia, 500+ Projektów | UnitDev</title>
+        <meta name="description" content="UnitDev to zespół 50+ ekspertów technologii z 15-letnim doświadczeniem. 500+ ukończonych projektów, 250+ zadowolonych klientów. Innowacyjność, jakość i partnerstwo." />
+        <meta name="keywords" content="o firmie, doświadczenie IT, zespół programistów, historia firmy, wartości firmy, case studies, referencje" />
+        <meta property="og:title" content="O Nas - 15 Lat Doświadczenia | UnitDev" />
+        <meta property="og:description" content="Zespół pasjonatów technologii. 15 lat doświadczenia, 500+ projektów, najwyższa jakość." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://unitdev.pl/about" />
+      </Helmet>
+      
       <section className="page-header">
         <div className="container">
           <h1>O Nas</h1>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/contact.css';
 
 const Contact = () => {
@@ -53,6 +54,16 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Kontakt - Skontaktuj się z Nami | UnitDev</title>
+        <meta name="description" content="Skontaktuj się z UnitDev. Email: kontakt@unitdev.pl, Tel: +48 123 456 789. Warszawa, Polska. Wsparcie 24/7 dla klientów premium. Bezpłatna wycena projektu." />
+        <meta name="keywords" content="kontakt, wycena projektu, email, telefon, Warszawa, konsultacja IT, wsparcie techniczne" />
+        <meta property="og:title" content="Kontakt - Skontaktuj się z Nami | UnitDev" />
+        <meta property="og:description" content="Omówmy Twój projekt. Bezpłatna wycena i konsultacja." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://unitdev.pl/contact" />
+      </Helmet>
+      
       <section className="page-header">
         <div className="container">
           <h1>Kontakt</h1>

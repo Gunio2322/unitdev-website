@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ServiceCard from '../components/ServiceCard';
 import { GlobeIcon, SmartphoneIcon, CloudIcon, CpuIcon, LockIcon, SettingsIcon } from '../components/icons/Icons';
 import '../styles/services.css';
@@ -80,6 +81,16 @@ const Services = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev</title>
+        <meta name="description" content="Oferujemy kompleksowe usługi IT: aplikacje webowe (React, Vue, Angular), mobilne (iOS, Android), Cloud Solutions (AWS, Azure), AI & Machine Learning, cyberbezpieczeństwo i DevOps." />
+        <meta name="keywords" content="usługi IT, tworzenie aplikacji webowych, aplikacje mobilne, cloud computing, AI, machine learning, cyberbezpieczeństwo, DevOps, CI/CD" />
+        <meta property="og:title" content="Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev" />
+        <meta property="og:description" content="Kompleksowe usługi programistyczne: aplikacje webowe, mobilne, Cloud Solutions, AI i cyberbezpieczeństwo." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://unitdev.pl/services" />
+      </Helmet>
+      
       <section className="page-header">
         <div className="container">
           <h1>Nasze Usługi</h1>
