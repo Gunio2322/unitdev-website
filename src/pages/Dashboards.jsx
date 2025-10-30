@@ -1,7 +1,42 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/monitoring.css';
 
 const Dashboards = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    document.title = 'Dashboardy Przemysłowe - Wizualizacja KPI i Produkcji | Enerjana';
+    
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Dashboardy przemysłowe do wizualizacji KPI, produkcji i OEE. Responsywne panele z wykresami real-time. Dostęp mobilny i komputerowy. Integracja z dowolnymi źródłami danych.');
+    updateMetaTag('keywords', 'dashboardy przemysłowe, wizualizacja KPI, panel produkcyjny, monitoring OEE, wykresy real-time przemysł, dashboard fabryczny, raportowanie produkcji, wizualizacja danych produkcyjnych');
+    updateMetaTag('og:title', 'Dashboardy Przemysłowe - Wizualizacja KPI i Produkcji | Enerjana', true);
+    updateMetaTag('og:description', 'Dashboardy przemysłowe do wizualizacji KPI, produkcji i OEE. Responsywne panele z wykresami real-time.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl/dashboards', true);
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl/dashboards');
+    }
+  }, [location]);
+
   const features = [
     {
       title: 'Real-time monitoring',
@@ -56,15 +91,6 @@ const Dashboards = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych | Enerjana</title>
-        <meta name="description" content="Dedykowane dashboardy przemysłowe z Real-Time monitoring. Wizualizacja KPI produkcyjnych, OEE, zarządzanie energią. React, Node.js, WebSockets. Województwo łódzkie, mazowieckie." />
-        <meta name="keywords" content="dashboard przemysłowy, wizualizacja produkcji, monitoring real-time, KPI produkcyjne, OEE, zarządzanie energią" />
-        <meta property="og:title" content="Dashboardy Przemysłowe - Wizualizacja Danych | Enerjana" />
-        <meta property="og:description" content="Dashboardy przemysłowe agregujące dane z PLC i systemów IT. Monitoring real-time, KPI, raporty zmianowe." />
-        <link rel="canonical" href="https://enerjana.pl/dashboards" />
-      </Helmet>
-
       <section className="page-header">
         <div className="container">
           <h1>Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych</h1>

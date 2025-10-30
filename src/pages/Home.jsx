@@ -1,9 +1,47 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import HeroCard from '../components/HeroCard';
-import { LayersIcon, CloudIcon, CpuIcon } from '../components/icons/Icons';
+import { CpuIcon, LayersIcon, CloudIcon } from '../components/icons/Icons';
 import '../styles/home.css';
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Update title
+    document.title = 'Monitoring Produkcji - Tańsza Alternatywa dla SCADA | Enerjana';
+    
+    // Update meta tags
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Aplikacje webowe do monitorowania procesów przemysłowych. Ułamek ceny systemów SCADA. 18 lat w automatyce. Mitsubishi, Siemens PLC. Łódzkie, Mazowieckie.');
+    updateMetaTag('keywords', 'aplikacje webowe PLC, system HMI SCADA webowy, dashboard przemysłowy, monitoring produkcji online, automatyka przemysłowa Łódź, programowanie PLC Warszawa, Node.js automatyka przemysłowa, React dashboard produkcyjny');
+    updateMetaTag('og:title', 'Monitoring Produkcji - Tańsza Alternatywa dla SCADA | Enerjana', true);
+    updateMetaTag('og:description', 'Aplikacje webowe do monitorowania procesów przemysłowych. Ułamek ceny systemów SCADA. 18 lat w automatyce.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl', true);
+    
+    // Update canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl');
+    }
+  }, [location]);
+
   const successStories = [
     {
       title: 'E-commerce Platform dla TechMart',
@@ -27,17 +65,6 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Aplikacje Webowe do Monitorowania Produkcji - Tańsza Alternatywa dla SCADA | Enerjana</title>
-        <meta name="description" content="Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. Specjalizujemy się w React, Node.js, Cloud Solutions i AI. Ponad 500 zrealizowanych projektów." />
-        <meta name="keywords" content="tworzenie aplikacji, aplikacje webowe, aplikacje mobilne, React, Node.js, Cloud, AI, Machine Learning, UnitDev" />
-        <meta property="og:title" content="UnitDev - Profesjonalne Rozwiązania Programistyczne" />
-        <meta property="og:description" content="Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. 15 lat doświadczenia, 500+ projektów." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://unitdev.pl" />
-        <link rel="canonical" href="https://unitdev.pl" />
-      </Helmet>
-      
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-bg-image">
@@ -55,10 +82,17 @@ const Home = () => {
           <h1>Aplikacje Webowe do Monitorowania Produkcji - Tańsza Alternatywa dla SCADA</h1>
           <p>Łączę 18 lat doświadczenia w automatyce przemysłowej z 10-letnim stażem w programowaniu aplikacji webowych. Enerjana to przystępne cenowo rozwiązania dla małych i średnich firm - alternatywa dla drogich systemów SCADA.</p>
           <div className="hero-cards">
+                        <HeroCard 
+              icon={CloudIcon}
+              title="Aplikacje Webowe"
+              description="Dedykowane aplikacje webowe i strony internetowe dla potrzeb Twojej firmy "
+              linkTo="/services"
+              linkText="Zapytaj o wycenę"
+            />
             <HeroCard 
               icon={CpuIcon}
-              title="Integracja PLC z Web"
-              description="Łączę sterowniki przemysłowe (Mitsubishi, Siemens) z aplikacjami webowymi"
+              title="Integracja Web z PLC"
+              description= "Łączę Aplikacje Webowe ze sterownikami przemysłowymi (Mitsubishi, Siemens)"
               linkTo="/services"
               linkText="Zobacz usługi"
             />
@@ -69,13 +103,7 @@ const Home = () => {
               linkTo="/services"
               linkText="Dowiedz się więcej"
             />
-            <HeroCard 
-              icon={CloudIcon}
-              title="Tańsza od SCADA"
-              description="Rozwiązania dostosowane do budżetu małych i średnich firm produkcyjnych"
-              linkTo="/contact"
-              linkText="Zapytaj o wycenę"
-            />
+
           </div>
         </div>
       </section>
@@ -83,15 +111,13 @@ const Home = () => {
       {/* About Business Section */}
       <section className="about-business">
         <div className="container">
-          <h2>Enerjana - Automatyka Przemysłowa Spotyka Web Development</h2>
+          <h2>Automatyka Przemysłowa  Web Development</h2>
           {/* <div className="business-intro">
             <p className="lead-text">
               Łączę <strong>18 lat doświadczenia w automatyce przemysłowej</strong> z <strong>10-letnim stażem w programowaniu aplikacji webowych</strong>. 
               Enerjana to przystępne cenowo rozwiązania dla małych i średnich firm - alternatywa dla drogich systemów SCADA.
             </p>
           </div> */}
-
-
 
           <div className="why-work-section">
             <h3>Dlaczego warto ze mną współpracować?</h3>

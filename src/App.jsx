@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
@@ -15,7 +14,7 @@ import './styles/main.css';
 
 function App() {
   return (
-    <HelmetProvider>
+    <>
       <Loader />
       <Navbar />
       <main>
@@ -31,7 +30,7 @@ function App() {
       </main>
       <Footer />
       <ScrollTop />
-    </HelmetProvider>
+    </>
   );
 }
 

@@ -15,21 +15,48 @@ const getMetaTags = (pathname) => {
   switch (pathname) {
     case '/':
       return {
-        title: 'UnitDev - Profesjonalne Rozwiązania Programistyczne | Aplikacje Web i Mobile',
-        description: 'Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. Specjalizujemy się w React, Node.js, Cloud Solutions i AI. Ponad 500 zrealizowanych projektów.',
-        keywords: 'tworzenie aplikacji, aplikacje webowe, aplikacje mobilne, React, Node.js, Cloud, AI, Machine Learning, UnitDev',
-        ogTitle: 'UnitDev - Profesjonalne Rozwiązania Programistyczne',
-        ogDescription: 'Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise. 15 lat doświadczenia, 500+ projektów.',
-        canonical: 'https://unitdev.pl'
+        title: 'Monitoring Produkcji - Tańsza Alternatywa dla SCADA | Enerjana',
+        description: 'Aplikacje webowe do monitorowania procesów przemysłowych. Ułamek ceny systemów SCADA. 18 lat w automatyce. Mitsubishi, Siemens PLC. Łódzkie, Mazowieckie.',
+        keywords: 'aplikacje webowe PLC, system HMI SCADA webowy, dashboard przemysłowy, monitoring produkcji online, automatyka przemysłowa Łódź, programowanie PLC Warszawa, Node.js automatyka przemysłowa, React dashboard produkcyjny',
+        ogTitle: 'Monitoring Produkcji - Tańsza Alternatywa dla SCADA | Enerjana',
+        ogDescription: 'Aplikacje webowe do monitorowania procesów przemysłowych. Ułamek ceny systemów SCADA. 18 lat w automatyce.',
+        canonical: 'https://enerjana.pl'
       };
     case '/services':
       return {
-        title: 'Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev',
-        description: 'Oferujemy kompleksowe usługi IT: aplikacje webowe (React, Vue, Angular), mobilne (iOS, Android), Cloud Solutions (AWS, Azure), AI & Machine Learning, cyberbezpieczeństwo i DevOps.',
-        keywords: 'usługi IT, tworzenie aplikacji webowych, aplikacje mobilne, cloud computing, AI, machine learning, cyberbezpieczeństwo, DevOps, CI/CD',
-        ogTitle: 'Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev',
-        ogDescription: 'Kompleksowe usługi programistyczne: aplikacje webowe, mobilne, Cloud Solutions, AI i cyberbezpieczeństwo.',
-        canonical: 'https://unitdev.pl/services'
+        title: 'Aplikacje Webowe do Wizualizacji Danych z PLC | Node.js React',
+        description: 'Dedykowane aplikacje webowe zbierające dane z PLC (Mitsubishi, Siemens) w czasie rzeczywistym. Node.js, React, MongoDB. Łódź, Warszawa, Polska centralna.',
+        keywords: 'aplikacja webowa do zbierania danych z PLC, wizualizacja danych PLC, monitoring maszyn przez internet, wizualizacja danych Mitsubishi PLC, system HMI dla Siemens S7, automatyka przemysłowa Łódź, MongoDB dane przemysłowe',
+        ogTitle: 'Aplikacje Webowe do Wizualizacji Danych z PLC | Node.js React',
+        ogDescription: 'Dedykowane aplikacje webowe zbierające dane z PLC w czasie rzeczywistym. Node.js, React, MongoDB.',
+        canonical: 'https://enerjana.pl/services'
+      };
+    case '/monitoring':
+      return {
+        title: 'Monitoring Procesów Przemysłowych - Tańsza Alternatywa dla SCADA',
+        description: 'Aplikacje webowe zamiast drogich systemów SCADA. Monitoring i sterowanie produkcją za ułamek ceny. Dla małych i średnich firm. Łódź, Warszawa.',
+        keywords: 'webowy system SCADA dla małych firm, monitoring maszyn przez internet, aplikacja webowa do zbierania danych z PLC, system HMI SCADA webowy, monitoring produkcji online, systemy HMI województwo łódzkie',
+        ogTitle: 'Monitoring Procesów Przemysłowych - Tańsza Alternatywa dla SCADA',
+        ogDescription: 'Aplikacje webowe zamiast drogich systemów SCADA. Monitoring produkcji za ułamek ceny.',
+        canonical: 'https://enerjana.pl/monitoring'
+      };
+    case '/dashboards':
+      return {
+        title: 'Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych Real-Time',
+        description: 'Dashboardy przemysłowe agregujące dane z PLC i systemów IT. Monitoring produkcji, KPI, OEE. React, Node.js. Woj. łódzkie, mazowieckie.',
+        keywords: 'dashboard przemysłowy, dashboard produkcyjny w przeglądarce, wizualizacja danych PLC, React dashboard produkcyjny, monitoring produkcji online, KPI produkcyjne, OEE, Real-time monitoring',
+        ogTitle: 'Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych Real-Time',
+        ogDescription: 'Dashboardy przemysłowe agregujące dane z PLC i systemów IT. Monitoring real-time, KPI, raporty zmianowe.',
+        canonical: 'https://enerjana.pl/dashboards'
+      };
+    case '/integration':
+      return {
+        title: 'Integracja PLC z Systemami IT - ERP, MES, BI | Enerjana',
+        description: 'Integracja sterowników PLC z systemami biznesowymi. Transfer danych OT-IT. Middleware Node.js. Protokoły Mitsubishi, Siemens, OPC UA, Modbus TCP.',
+        keywords: 'integracja PLC IT, integracja sterownika z systemem ERP, OPC UA integracja, Modbus TCP komunikacja, MC Protocol Mitsubishi, S7 Communication, middleware przemysłowy, transfer danych OT-IT',
+        ogTitle: 'Integracja PLC z Systemami IT - ERP, MES, BI | Enerjana',
+        ogDescription: 'Łączę świat automatyki (OT) z systemami IT. Integracja PLC z ERP, MES, BI. Protokoły przemysłowe + REST API.',
+        canonical: 'https://enerjana.pl/integration'
       };
     case '/about':
       return {
@@ -42,48 +69,21 @@ const getMetaTags = (pathname) => {
       };
     case '/contact':
       return {
-        title: 'Kontakt - Skontaktuj się z Nami | UnitDev',
-        description: 'Skontaktuj się z UnitDev. Email: kontakt@unitdev.pl, Tel: +48 123 456 789. Warszawa, Polska. Wsparcie 24/7 dla klientów premium. Bezpłatna wycena projektu.',
-        keywords: 'kontakt, wycena projektu, email, telefon, Warszawa, konsultacja IT, wsparcie techniczne',
-        ogTitle: 'Kontakt - Skontaktuj się z Nami | UnitDev',
+        title: 'Kontakt - Skontaktuj się z Nami | Enerjana',
+        description: 'Skontaktuj się z Enerjana. Email: enerjana2@gmail.com, Tel: +48 792 425 411. Cielądz, Polska. Bezpłatna wycena projektu.',
+        keywords: 'kontakt, wycena projektu, email, telefon, konsultacja IT, wsparcie techniczne, automatyka przemysłowa',
+        ogTitle: 'Kontakt - Skontaktuj się z Nami | Enerjana',
         ogDescription: 'Omówmy Twój projekt. Bezpłatna wycena i konsultacja.',
-        canonical: 'https://unitdev.pl/contact'
-      };
-    case '/monitoring':
-      return {
-        title: 'Aplikacje Webowe do Monitorowania i Sterowania - Tańsza Alternatywa dla SCADA | Enerjana',
-        description: 'Dedykowane aplikacje webowe do monitorowania procesów przemysłowych. Tańsza alternatywa dla systemów SCADA - kosztuje ułamek ceny, działa w przeglądarce, bez opłat licencyjnych.',
-        keywords: 'monitoring procesów przemysłowych, aplikacje webowe przemysł, alternatywa SCADA, integracja PLC, Mitsubishi Siemens, monitoring produkcji',
-        ogTitle: 'Aplikacje Webowe do Monitorowania - Alternatywa dla SCADA',
-        ogDescription: 'Dedykowane aplikacje webowe do monitoringu przemysłu. Tańsze niż SCADA, dostępne przez przeglądarkę.',
-        canonical: 'https://unitdev.pl/monitoring'
-      };
-    case '/dashboards':
-      return {
-        title: 'Dashboardy Przemysłowe - Wizualizacja Danych Produkcyjnych | Enerjana',
-        description: 'Dedykowane dashboardy przemysłowe z Real-Time monitoring. Wizualizacja KPI produkcyjnych, OEE, zarządzanie energią. React, Node.js, WebSockets. Województwo łódzkie, mazowieckie.',
-        keywords: 'dashboard przemysłowy, wizualizacja produkcji, monitoring real-time, KPI produkcyjne, OEE, zarządzanie energią',
-        ogTitle: 'Dashboardy Przemysłowe - Wizualizacja Danych | Enerjana',
-        ogDescription: 'Dashboardy przemysłowe agregujące dane z PLC i systemów IT. Monitoring real-time, KPI, raporty zmianowe.',
-        canonical: 'https://unitdev.pl/dashboards'
-      };
-    case '/integration':
-      return {
-        title: 'Integracja PLC z Systemami IT - Połącz Świat OT z IT | Enerjana',
-        description: 'Integracja sterowników PLC (Mitsubishi, Siemens) z systemami ERP, MES, BI. Protokoły MC, S7, OPC UA, Modbus TCP. Middleware Node.js. Województwo łódzkie, mazowieckie.',
-        keywords: 'integracja PLC, OT IT, sterowniki Mitsubishi Siemens, MC Protocol, S7 Communication, OPC UA, middleware przemysłowy, ERP MES integracja',
-        ogTitle: 'Integracja PLC z Systemami IT - OT/IT Bridge | Enerjana',
-        ogDescription: 'Łączę świat automatyki (OT) z systemami IT. Integracja PLC z ERP, MES, BI. Protokoły przemysłowe + REST API.',
-        canonical: 'https://unitdev.pl/integration'
+        canonical: 'https://enerjana.pl/contact'
       };
     default:
       return {
-        title: 'UnitDev - Profesjonalne Rozwiązania Programistyczne',
-        description: 'Tworzymy nowoczesne aplikacje webowe, mobilne i systemy enterprise',
-        keywords: 'aplikacje webowe, aplikacje mobilne, IT, programowanie',
-        ogTitle: 'UnitDev',
-        ogDescription: 'Profesjonalne rozwiązania programistyczne',
-        canonical: 'https://unitdev.pl'
+        title: 'Enerjana - Monitoring Produkcji | Aplikacje Webowe PLC',
+        description: 'Aplikacje webowe do monitorowania procesów przemysłowych. Tańsza alternatywa dla SCADA.',
+        keywords: 'aplikacje webowe PLC, monitoring produkcji, automatyka przemysłowa',
+        ogTitle: 'Enerjana - Monitoring Produkcji',
+        ogDescription: 'Aplikacje webowe dla przemysłu',
+        canonical: 'https://enerjana.pl'
       };
   }
 };

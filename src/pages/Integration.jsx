@@ -1,7 +1,42 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/monitoring.css';
 
 const Integration = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    document.title = 'Integracja PLC z Aplikacjami Web - Node.js Modbus TCP | Enerjana';
+    
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Integracja sterowników PLC z aplikacjami webowymi i systemami IT. Node.js + Modbus TCP/IP. Łączę Mitsubishi, Siemens z ERP, MES, bazami danych. Automatyk + programista.');
+    updateMetaTag('keywords', 'integracja PLC web, Node.js Modbus TCP, połączenie PLC ERP, integracja sterowników IT, Mitsubishi komunikacja, Siemens integracja, PLC API REST, automatyka IT OT');
+    updateMetaTag('og:title', 'Integracja PLC z Aplikacjami Web - Node.js Modbus TCP | Enerjana', true);
+    updateMetaTag('og:description', 'Integracja sterowników PLC z aplikacjami webowymi i systemami IT. Node.js + Modbus TCP/IP.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl/integration', true);
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl/integration');
+    }
+  }, [location]);
+
   const integrationServices = [
     {
       title: 'Integracja PLC z systemami biznesowymi',
@@ -52,15 +87,6 @@ const Integration = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Integracja PLC z Systemami IT - Połącz Świat OT z IT | Enerjana</title>
-        <meta name="description" content="Integracja sterowników PLC (Mitsubishi, Siemens) z systemami ERP, MES, BI. Protokoły MC, S7, OPC UA, Modbus TCP. Middleware Node.js. Województwo łódzkie, mazowieckie." />
-        <meta name="keywords" content="integracja PLC, OT IT, sterowniki Mitsubishi Siemens, MC Protocol, S7 Communication, OPC UA, middleware przemysłowy, ERP MES integracja" />
-        <meta property="og:title" content="Integracja PLC z Systemami IT - OT/IT Bridge | Enerjana" />
-        <meta property="og:description" content="Łączę świat automatyki (OT) z systemami IT. Integracja PLC z ERP, MES, BI. Protokoły przemysłowe + REST API." />
-        <link rel="canonical" href="https://enerjana.pl/integration" />
-      </Helmet>
-
       <section className="page-header">
         <div className="container">
           <h1>Integracja PLC z Systemami IT - Połącz Świat OT z IT</h1>

@@ -117,9 +117,44 @@
     }
 }
 
+/* Show Phone/Email Button */
+.btn-show-phone {
+    background: var(--gradient-1);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+}
+
+.btn-show-phone:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 168, 255, 0.5);
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .btn-show-phone {
+        width: 100%;
+        padding: 0.8rem;
     }
 }

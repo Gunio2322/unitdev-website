@@ -2,7 +2,7 @@
 .hero {
     background: var(--bg-primary);
     color: var(--white);
-    padding: 120px 20px;
+    padding: 80px 20px;  /* 120px 20px */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -233,6 +233,7 @@
     line-height: 1.8;
     color: var(--text-color);
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .why-work-content strong {
@@ -366,7 +367,7 @@
     }
     
     .about-business h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     .lead-text {

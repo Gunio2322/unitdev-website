@@ -32,10 +32,25 @@
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: bold;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: block;
+}
+
+.logo-svg {
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-svg:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+    .logo-svg {
+        height: 50px;
+    }
 }
 
 .nav-menu {

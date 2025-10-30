@@ -1,9 +1,44 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import { GlobeIcon, SmartphoneIcon, CloudIcon, CpuIcon } from '../components/icons/Icons';
 import '../styles/services.css';
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    document.title = 'Aplikacje Webowe do Wizualizacji Danych z PLC | Node.js React | Enerjana';
+    
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Tworzę aplikacje webowe do wizualizacji i monitoringu danych z PLC. Node.js + React + Modbus TCP. Specjalizacja: integracja sterowników Mitsubishi i Siemens z systemami webowymi.');
+    updateMetaTag('keywords', 'aplikacje webowe do PLC, wizualizacja danych PLC, Node.js Modbus TCP, React dashboard przemysłowy, programowanie sterowników Mitsubishi, integracja Siemens PLC, monitoring maszyn produkcyjnych, Node.js automatyka');
+    updateMetaTag('og:title', 'Aplikacje Webowe do Wizualizacji Danych z PLC | Node.js React | Enerjana', true);
+    updateMetaTag('og:description', 'Tworzę aplikacje webowe do wizualizacji i monitoringu danych z PLC. Node.js + React + Modbus TCP.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl/services', true);
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl/services');
+    }
+  }, [location]);
+
   const services = [
     {
       icon: GlobeIcon,
@@ -45,16 +80,6 @@ const Services = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev</title>
-        <meta name="description" content="Oferujemy kompleksowe usługi IT: aplikacje webowe (React, Vue, Angular), mobilne (iOS, Android), Cloud Solutions (AWS, Azure), AI & Machine Learning, cyberbezpieczeństwo i DevOps." />
-        <meta name="keywords" content="usługi IT, tworzenie aplikacji webowych, aplikacje mobilne, cloud computing, AI, machine learning, cyberbezpieczeństwo, DevOps, CI/CD" />
-        <meta property="og:title" content="Usługi IT - Aplikacje Web, Mobile, Cloud, AI | UnitDev" />
-        <meta property="og:description" content="Kompleksowe usługi programistyczne: aplikacje webowe, mobilne, Cloud Solutions, AI i cyberbezpieczeństwo." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://unitdev.pl/services" />
-      </Helmet>
-      
       <section className="page-header">
         <div className="container">
           <h1>Moje Usługi</h1>

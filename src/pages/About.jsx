@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import '../styles/about.css';
 
 const About = () => {
+  const location = useLocation();
   const [stats, setStats] = useState([
     { target: 18, current: 0, label: 'Lat w Automatyce' },
     { target: 10, current: 0, label: 'Lat w Programowaniu' }
@@ -10,6 +11,38 @@ const About = () => {
   
   const statsRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    document.title = 'O Mnie - 18 Lat w Automatyce Przemysłowej | Enerjana';
+    
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Mariusz Głuszcz - 18 lat doświadczenia w automatyce przemysłowej + 10 lat w programowaniu. Tworzę aplikacje webowe dla przemysłu łącząc automatykę z IT. Łódzkie, Mazowieckie.');
+    updateMetaTag('keywords', 'automatyk programista, doświadczenie automatyka, programowanie przemysłowe, Node.js automatyka, Mariusz Głuszcz, automatyk Łódź, integracja OT IT, aplikacje przemysłowe');
+    updateMetaTag('og:title', 'O Mnie - 18 Lat w Automatyce Przemysłowej | Enerjana', true);
+    updateMetaTag('og:description', 'Mariusz Głuszcz - 18 lat w automatyce przemysłowej + 10 lat w programowaniu. Aplikacje webowe dla przemysłu.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl/about', true);
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl/about');
+    }
+  }, [location]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -53,16 +86,6 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>O Mnie - Automatyk i Web Developer | Enerjana</title>
-        <meta name="description" content="Łączę 18 lat doświadczenia w automatyce przemysłowej z 10 latami programowania webowego. Programowanie sterowników PLC, aplikacje SCADA, dashboardy, integracja PLC z systemami IT." />
-        <meta name="keywords" content="automatyk programista, programowanie PLC, sterowniki przemysłowe, Node.js developer, React developer, integracja PLC ERP, automatyka i IT" />
-        <meta property="og:title" content="O Mnie - Automatyk i Web Developer | Enerjana" />
-        <meta property="og:description" content="18 lat w automatyce + 10 lat w programowaniu webowym. Unikalne połączenie kompetencji dla przemysłu." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://enerjana.pl/about" />
-      </Helmet>
-      
       <section className="page-header">
         <div className="container">
           <h1>O Mnie</h1>

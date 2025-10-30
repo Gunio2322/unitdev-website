@@ -1,7 +1,42 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/monitoring.css';
 
 const Monitoring = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    document.title = 'Systemy Monitoringu Przemysłowego - Dashboardy Real-Time | Enerjana';
+    
+    const updateMetaTag = (name, content, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('description', 'Systemy monitoringu procesów przemysłowych. Dashboardy z wizualizacją real-time, alarmy, raporty. Niższa cena niż SCADA. Sprawdzone rozwiązania dla małych i średnich firm produkcyjnych.');
+    updateMetaTag('keywords', 'monitoring produkcji, system monitoringu przemysłowego, dashboardy real-time, wizualizacja procesów produkcyjnych, alternatywa dla SCADA, monitoring maszyn, system alarmowy przemysł, raporty produkcyjne');
+    updateMetaTag('og:title', 'Systemy Monitoringu Przemysłowego - Dashboardy Real-Time | Enerjana', true);
+    updateMetaTag('og:description', 'Systemy monitoringu procesów przemysłowych. Dashboardy z wizualizacją real-time, alarmy, raporty.', true);
+    updateMetaTag('og:url', 'https://enerjana.pl/monitoring', true);
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://enerjana.pl/monitoring');
+    }
+  }, [location]);
+
   const features = [
     'Wizualizacja procesów w czasie rzeczywistym',
     'Sterowanie maszynami i procesami (z wielopoziomowym zabezpieczeniem)',
@@ -26,15 +61,6 @@ const Monitoring = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Aplikacje Webowe do Monitorowania i Sterowania - Tańsza Alternatywa dla SCADA | Enerjana</title>
-        <meta name="description" content="Dedykowane aplikacje webowe do monitorowania procesów przemysłowych. Tańsza alternatywa dla systemów SCADA - kosztuje ułamek ceny, działa w przeglądarce, bez opłat licencyjnych." />
-        <meta name="keywords" content="monitoring procesów przemysłowych, aplikacje webowe przemysł, alternatywa SCADA, integracja PLC, Mitsubishi Siemens, monitoring produkcji" />
-        <meta property="og:title" content="Aplikacje Webowe do Monitorowania - Alternatywa dla SCADA" />
-        <meta property="og:description" content="Dedykowane aplikacje webowe do monitoringu przemysłu. Tańsze niż SCADA, dostępne przez przeglądarkę." />
-        <link rel="canonical" href="https://unitdev.pl/monitoring" />
-      </Helmet>
-
       {/* Page Header */}
       <section className="page-header">
         <div className="container">
